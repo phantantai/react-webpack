@@ -1,0 +1,111 @@
+@import '../../sass/global/veriable';
+.intern{
+    background-image: url('../components/login/bglogin.jpg');
+    height: -webkit-fill-available;
+    max-width: 100%;
+    background-size:cover;
+    position: relative;
+    z-index: 3;
+    .container{
+        border-radius: 5px;
+        box-shadow: 2px 2px rgba(155, 154, 156, 0.5);
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        background: rgba(155, 154, 156, 0.5);
+        width: 30%;
+        
+        .content{
+            width: 90%;
+            margin: 0 auto;
+            header{
+                margin-top: 15px;
+                font-size: 40px;
+                text-align: center;
+                color: coral;
+                
+                .header-headings{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                }
+            }
+            ul{
+                display: flex;
+                align-items: center;
+                li{
+                    cursor: pointer;
+                    list-style: none;
+                    opacity: 0.5;
+                    width: 15%;
+                    &:hover{
+                        font-weight: 500;
+                        opacity: 1;
+                    }
+                    &.active{
+                        opacity: 1;
+                        font-weight: 700;
+                    }
+                    &:nth-of-type(2) {
+                        margin-left: 15px;
+                      }
+                    &:last-of-type {
+                        margin-left: auto;
+                      }
+                }
+            }
+            .account-form{
+                width: 100%;
+                &--fields{
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 auto;
+                    
+                    input{
+                        height: 20px;
+                        border: 0;
+                        border-radius: 5px;
+                        margin-bottom: 10px;
+                        padding: 15px;
+                        outline: none;
+                        &:disabled{
+                            display: none ;
+                        }
+                        &:-webkit-input-placeholder {
+                            color: #aaa;
+                        }
+                        &:-ms-input-placeholder {
+                            color: #aaa;
+                        }
+                        &::placeholder{
+                            color: #aaa;
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                }
+                .btn-submit-form{
+                    outline: none;
+                    position: relative;
+                    width: 30%;
+                    height: 50px;
+                    margin: 5% auto;
+                    border-radius: 5px;
+                    border: 1px solid;
+                    box-shadow: 2px 2px black;
+                    animation: btn-animation 2s;
+                    &:hover{
+                        cursor: pointer;
+                        // position: absolute;
+                        transform: translateY(-3px);
+                    }
+                }
+            }
+        }
+    }
+}
